@@ -1,6 +1,6 @@
 package ru.geekbrains.java2;
 
-import javax.swing.*;
+
 import javax.swing.text.JTextComponent;
 
 public class AddStrings {

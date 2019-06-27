@@ -43,9 +43,15 @@ public class Window extends JFrame {
 //        Добавление элементов нанижнюю панель
 
         send.setPreferredSize(new Dimension(100,60));
-        String name = JOptionPane.showInputDialog ("Введи свой никнейм");
-        if (!name.isEmpty())userName.setText(name);
-        else userName.setText("Guest_1");
+        try {
+            String name = JOptionPane.showInputDialog ("Введи свой никнейм");
+            if (!name.isEmpty())userName.setText(name);
+            else userName.setText("Guest_1");
+        } catch (NullPointerException e) {
+            userName.setText("Guest_1");
+        }
+
+
         userName.setEditable(false);
         userName.setPreferredSize(new Dimension(100,60));
 
